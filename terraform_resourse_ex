@@ -25,6 +25,50 @@ resource "local_file" "data" {
 	content = "kubernetes the hard way!"
 }
 
+
+resource "tls_private_key" "pvtkey" {
+     algorithm = "RSA"
+     rsa_bits = 4096 
+}
+
+
+
+{
+  "version": 4,
+  "terraform_version": "1.5.0",
+  "serial": 1,
+  "lineage": "b7647ed5-6c50-6c83-10a6-721249cb91bd",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "tls_private_key",
+      "name": "pvtkey",
+      "provider": "provider[\"registry.terraform.io/hashicorp/tls\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "algorithm": "RSA",
+            "ecdsa_curve": "P224",
+            "id": "361084ed80249e072e9c39e41b5390c883e203f3",
+            "private_key_openssh": "-----BEGIN OPENSSH PRIVATE KEY-----\n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\n-----END OPENSSH PRIVATE KEY-----\n",
+            "private_key_pem": "-----BEGIN RSA PRIVATE KEY-----\n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\n-----END RSA PRIVATE KEY-----\n",
+            "private_key_pem_pkcs8": "-----BEGIN PRIVATE KEY-----\n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\nkj+rQgeQHOTFRKxm7Sn/EyuRmY3i7vM=\n-----END PRIVATE KEY-----\n",
+            "public_key_fingerprint_md5": "91:49:22:e4:4b:b0:58:38:bf:32:d3:f1:49:01:9b:20",
+            "public_key_fingerprint_sha256": "SHA256:pXp28rMV1Ii92AXfXUPslyVVu+2UrIr1LkqItgzjZcY",
+            "public_key_openssh": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC5jndGX8d6z2vjTAy3mDG5ajPNEuFjRzayjNmbpcFAJrSuCxx21pJpOLhckaSJp9WD2v6wJn1EZth1GN6/swjTpR+YncclTpufkJmypyxIczIMMKiakfFrMQ7GK0kz9Hmz13tZ9veKP142o5zYmpsXESaVhgQ7FRgI2ZH5M2k3Lz8a6dSSznsx0s/Vwaglul0n2IBI06omchiq9m/4TDXuYveUYukPPF7KMJWH7cQWYTLQX9NQUYRLDx8EPoyHNfD9QatzIRKkYtV/WERpbIUX3iWQpZBeaGoNNw1gq7AxSmRPWs3Kgp74fNn74RjOU/rA7J3MV2tOPdTiPCHFzRZObMnWC2Lykc+QzoBgIkPHQGPAZY+sumV9ktnhDgWigCW+qJEuMqIuynI3g5eckE3ONfwV1VjtnJgD0OfmrquGdXHa3+VOoTTknpIGfpe/8Kq9SMEnLSmmIMMotMKUeaq4cjBdYVs1yF+v+tkHhHLdHo15tlc3A4W5moAnQtozMNk87wABtj3Qa/gd/GsXeoF8Rex87L5ZRxEdXj1Qu5bpKUP79B1Hv7ynpjF9Wfgz+yo7M0pzVNSOyg36w39t6XOkYoTXdwg4fVs9UR/N11A6mHYTjrnH/Sd12k8lEbsceMPTs+muPUGcMhWFmDSwQ6ufHxiBR5nt5h89bujBR8HnGQ==\n",
+            "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAuY53Rl/Hes9r40wMt5gx\nuWozzRLhY0c2sozZm6XBQCa0rgscdtaSaTi4XJGkiafVg9r+sCZ9RGbYdRjev7MI\n06UfmJ3HJU6bn5CZsqcsSHMyDDCompHxazEOxitJM/R5s9d7Wfb3ij9eNqOc2Jqb\nFxEmlYYEOxUYCNmR+TNpNy8/GunUks57MdLP1cGoJbpdJ9iASNOqJnIYqvZv+Ew1\n7mL3lGLpDzxeyjCVh+3EFmEy0F/TUFGESw8fBD6MhzXw/UGrcyESpGLVf1hEaWyF\nF94lkKWQXmhqDTcNYKuwMUpkT1rNyoKe+HzZ++EYzlP6wOydzFdrTj3U4jwhxc0W\nTmzJ1gti8pHPkM6AYCJDx0BjwGWPrLplfZLZ4Q4FooAlvqiRLjKiLspyN4OXnJBN\nzjX8FdVY7ZyYA9Dn5q6rhnVx2t/lTqE05J6SBn6Xv/CqvUjBJy0ppiDDKLTClHmq\nuHIwXWFbNchfr/rZB4Ry3R6NebZXNwOFuZqAJ0LaMzDZPO8AAbY90Gv4HfxrF3qB\nfEXsfOy+WUcRHV49ULuW6SlD+/QdR7+8p6YxfVn4M/sqOzNKc1TUjsoN+sN/belz\npGKE13cIOH1bPVEfzddQOph2E465x/0nddpPJRG7HHjD07Pprj1BnDIVhZg0sEOr\nnx8YgUeZ7eYfPW7owUfB5xkCAwEAAQ==\n-----END PUBLIC KEY-----\n",
+            "rsa_bits": 4096
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
+
 resource "kubernetes_namespace" "dev" {
   metadata {
     name = "development"
@@ -45,3 +89,250 @@ resource "random_string" "iac_random" {
   min_upper = 5
 }
 
+
+
+============------Example on -[DEPENDS_ON]=========---------
+
+
+resource "local_file" "whale" {
+        filename = "/root/whale"
+        content = "whale"
+        depends_on = [ local_file.krill ]
+}
+resource "local_file" "krill" {
+  filename = "/root/krill"
+  content = "krill"
+  }
+
+
+
+------======--Example of ----OUTPUT VARIABLES-----===================
+
+
+main.tf
+
+resource "random_uuid" "id1" {
+   
+}
+resource "random_uuid" "id2" {
+   
+}
+resource "random_uuid" "id3" {
+   
+}
+resource "random_uuid" "id4" {
+   
+}
+resource "random_uuid" "id5" {
+   
+}
+resource "random_uuid" "id6" {
+   
+}
+resource "random_uuid" "id7" {
+   
+}
+resource "random_integer" "order1" {
+  min     = 1
+  max     = 99999
+ 
+}
+resource "random_integer" "order2" {
+  min     = 1
+  max     = 222222
+ 
+}
+
+
+output.tf---------------------------------------------
+
+output "id1" {
+   value = random_uuid.id1.result
+}
+output "id2" {
+    value = random_uuid.id2.result
+   
+}
+output "id3" {
+    value = random_uuid.id3.result
+   
+}
+
+output "id4" {
+    value = random_uuid.id4.result
+   
+}
+output "id5" {
+    value = random_uuid.id5.result
+}
+   
+output "id6" {
+    value = random_uuid.id6.result
+   
+}
+output "id7" {
+    value = random_uuid.id7.result
+   
+}
+output "order1" {
+ value = random_integer.order1.result
+ 
+}
+output "order2" {
+ value = random_integer.order1.result
+ 
+}
+
+
+
+
+ex.  main.tf------------------------------------------
+
+resource "random_pet" "my-pet" {
+
+  length    = var.length 
+}
+
+output "pet-name" {
+	
+	value = random_pet.my-pet.id
+	description = "Record the value of pet ID generated by the random_pet resource"
+}
+
+
+
+
+
+variable.tf-------------------------------------
+variable "prefix" {
+  default = "Mrs"	
+}
+
+variable "separator" {
+	default = "."
+}
+
+variable "length" {
+	default = "1"
+}
+
+
+++++++terraform init -----
+++++++terraform plan-----------
+++++++terraform apply--------------
+
+Terraform used the selected providers to generate the following execution plan.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # random_integer.order1 will be created
+  + resource "random_integer" "order1" {
+      + id     = (known after apply)
+      + max    = 99999
+      + min    = 1
+      + result = (known after apply)
+    }
+
+  # random_integer.order2 will be created
+  + resource "random_integer" "order2" {
+      + id     = (known after apply)
+      + max    = 222222
+      + min    = 1
+      + result = (known after apply)
+    }
+
+  # random_uuid.id1 will be created
+  + resource "random_uuid" "id1" {
+      + id     = (known after apply)
+      + result = (known after apply)
+    }
+
+  # random_uuid.id2 will be created
+  + resource "random_uuid" "id2" {
+      + id     = (known after apply)
+      + result = (known after apply)
+    }
+
+  # random_uuid.id3 will be created
+  + resource "random_uuid" "id3" {
+      + id     = (known after apply)
+      + result = (known after apply)
+    }
+
+  # random_uuid.id4 will be created
+  + resource "random_uuid" "id4" {
+      + id     = (known after apply)
+      + result = (known after apply)
+    }
+
+  # random_uuid.id5 will be created
+  + resource "random_uuid" "id5" {
+      + id     = (known after apply)
+      + result = (known after apply)
+    }
+
+  # random_uuid.id6 will be created
+  + resource "random_uuid" "id6" {
+      + id     = (known after apply)
+      + result = (known after apply)
+    }
+
+  # random_uuid.id7 will be created
+  + resource "random_uuid" "id7" {
+      + id     = (known after apply)
+      + result = (known after apply)
+    }
+
+Plan: 9 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + id1    = (known after apply)
+  + id2    = (known after apply)
+  + id3    = (known after apply)
+  + id4    = (known after apply)
+  + id5    = (known after apply)
+  + id6    = (known after apply)
+  + id7    = (known after apply)
+  + order1 = (known after apply)
+  + order2 = (known after apply)
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+random_uuid.id3: Creating...
+random_uuid.id2: Creating...
+random_integer.order2: Creating...
+random_uuid.id1: Creating...
+random_uuid.id7: Creating...
+random_uuid.id6: Creating...
+random_uuid.id4: Creating...
+random_uuid.id5: Creating...
+random_integer.order1: Creating...
+random_uuid.id4: Creation complete after 0s [id=7a9e598d-da80-77f9-c08a-7f8c22c44c51]
+random_integer.order2: Creation complete after 0s [id=160884]
+random_uuid.id6: Creation complete after 0s [id=7ff7a5ef-1801-1047-1f89-4ce68dbf2c45]
+random_uuid.id2: Creation complete after 0s [id=49d4e4ad-52ba-8039-e71a-2653bbc65e37]
+random_uuid.id3: Creation complete after 0s [id=7295480f-ca5b-d3e9-7f6f-21ad467c18d4]
+random_uuid.id5: Creation complete after 0s [id=d3f01d0d-e46c-5129-84eb-0577d6601198]
+random_integer.order1: Creation complete after 0s [id=4736]
+random_uuid.id1: Creation complete after 0s [id=18c8f421-2cfd-26f4-935f-5e957612ba58]
+random_uuid.id7: Creation complete after 0s [id=b7f55a80-469e-dc8e-5609-b3b2c9342515]
+
+Apply complete! Resources: 9 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+id1 = "18c8f421-2cfd-26f4-935f-5e957612ba58"
+id2 = "49d4e4ad-52ba-8039-e71a-2653bbc65e37"
+id3 = "7295480f-ca5b-d3e9-7f6f-21ad467c18d4"
+id4 = "7a9e598d-da80-77f9-c08a-7f8c22c44c51"
+id5 = "d3f01d0d-e46c-5129-84eb-0577d6601198"
+id6 = "7ff7a5ef-1801-1047-1f89-4ce68dbf2c45"
+id7 = "b7f55a80-469e-dc8e-5609-b3b2c9342515"
+order1 = 4736
+order2 = 4736
